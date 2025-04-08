@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>АвтоДневник</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f6f3;
+      color: #1a1a1a;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 5%;
+      box-sizing: border-box;
+      gap: 40px;
+    }
+
+    .content {
+      max-width: 500px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .store-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .store-buttons img {
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .store-buttons img:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-image {
+      position: relative;
+      height: 60vh;
+      flex-shrink: 0;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+    }
+
+    .phone-image img.screenshot {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 2.39%;
+      left: 4.6%;
+      width: 90.77%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .phone-image img.mockup {
+      position: relative;
+      height: 100%;
+      width: auto;
+      display: block;
+      pointer-events: none;
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .content {
+        max-width: 100%;
+      }
+
+      .title {
+        font-size: 32px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .store-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .store-buttons img {
+        height: 50px;
+      }
+
+      .phone-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .phone-image img.screenshot {
+        position: absolute;
+        top: 2.39%;
+        left: 4.6%;
+        width: 90.77%;
+        height: 100%;
+      }
+
+      .phone-image img.mockup {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="title">АвтоДневник</div>
+      <div class="subtitle">Ваш личный журнал ухода за автомобилем</div>
+      <div class="store-buttons">
+        <a href="#">
+          <img src="google-play-badge.svg" alt="Google Play" />
+        </a>
+        <a href="#">
+          <img src="rustore-badge.svg" alt="RuStore" />
+        </a>
+      </div>
+    </div>
+    <div class="phone-image">
+      <img class="screenshot" src="app-screenshot.png" alt="App Screenshot" />
+      <img class="mockup" src="phone-mockup.svg" alt="Phone Mockup" />
+    </div>
+  </div>
+</body>
+</html>
